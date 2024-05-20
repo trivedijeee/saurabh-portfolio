@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.fixed-header {
+    position: fixed; /* Fixed position for larger screens */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(7, 7, 44, 0.9);
+}
+body {
+    background-color: rgb(0, 0, 33);
+    color: white;
+    font-family: Anek Devanagari;
+}
+
+ .fixed-header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(13, 13, 50);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+    width: 100px;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 10px 0;
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: rgb(131, 151, 239);
+    font-size: 1.06rem;
+    border-radius: 65px;
+    transition: color 1s ease;
+    transform: scale(1.5);
+}
+
+.left {
+    font-size: 1.5rem;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.firstSection>div {
+    width: 40%;
+}
+
+.leftSection {
+    font-size: 3rem;
+    margin-left: 90px;
+
+}
+
+.rightSection img {
+    width: 80%;
+    margin: 0 -25px 125px;
+    border: white 2px solid;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+.rightSection img:hover {
+    transform: scale(1.15); /* Adjust the scale factor as desired */
+}
+
+.purple {
+    color: rgb(154, 89, 215);
+}
+
+.textgrey {
+    color: grey;
+}
+
+#element {
+    color: rgb(154, 89, 215);
+}
+
+.secondSection {
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+
+main hr {
+    border: 0px;
+    background-color: #9c97f1;
+    height: 1.2px;
+    margin: 40px 80px;
+}
+
+.secondSection h1 {
+    font-size: 1.9rem;
+}
+.forIcons h1{
+    font-size: 1.9rem;
+    margin: auto;
+    max-width: 80vw;
+}
+
+.secondSection .box {
+    background: white;
+    width: 80vw;
+    height: 2px;
+    margin: 56px 0;
+    display: flex;
+}
+
+.secondSection .vertical {
+    background: white;
+    width: 1px;
+    height: 93px;
+    margin: 0 190px;
+}
+
+.imageTop {
+    width: 50px;
+    position: relative;
+    top: -60px;
+    left: -9px;
+    ;
+}
+
+.verticalText {
+    position: relative;
+    top: 50px;
+    width: 150px;
+    font-size: 14px;
+}
+
+.verticalDescription {
+    position: relative;
+    top: 60px;
+    color: grey;
+    width: 150px;
+    font-size: 9px;
+}
+
+.logo-img {
+    width: 250px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: -20%;
+    /* mix-blend-mode: darken; */
+}
+footer{
+    background-color: rgb(12, 12, 33);
+}
+.footer{
+    display: flex;
+    padding: 23px 122px;
+    justify-content: space-evenly;
+}
+.footer ul{
+    list-style: none;
+}
+.footer > div{
+    width: 223px;
+}
+footer .footer-rights{
+    text-align: center;
+    color: grey;
+    padding: 12px 0;
+}
+.leftSection .buttons{
+    padding: 60px 0;
+}
+.leftSection .btn, .btn{
+    padding: 12px;
+    background-color: rgb(19, 19, 120);
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 20px;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    margin: 0 620px;
+    /* background-color: white; */
+    /* border-radius: 25px; */
+  }
+
+.social-icon {
+    margin: 5px 10px; 
+    padding: auto;
+}
+.social-icon img:hover{
+    transform: scale(1.4);
+}
+
+.social-icon img {
+    width: 30px; /* Adjust the size of the icons */
+}
+.toolsUsage {
+    background-color: rgb(0, 0, 33);
+    width: 83%;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto; /* Center the section horizontally */
+    padding: 50px 80px; /* Add padding to the top and bottom */
+    gap: 10px; /* Optional spacing between icons */
+}
+
+.toolsUsage .toolsIcon {
+    background-color: rgb(0, 0, 33);
+    width: 50px; /* Adjust the width of each icon container */
+    height: 50px; /* Adjust the height of each icon container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.toolsUsage .toolsIcon img {
+    width: 60px; /* Adjust the size of the icons */
+}
+.toolsUsage .toolsIcon:hover{
+    transform: scale(1.4);
+}
+.toolsUsage .tooltip{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.toolsUsage .toolsIcon:hover .tooltip{
+    opacity: 1;
+}
+.form {
+    align-items: center;
+    font-size: 25px;
+}
+
+label {
+    display: inline-block;
+    clear: left;
+    width: 250px; /* Adjust the width as needed */
+    text-align: left; /* Change to 'right' if you want labels close to the inputs */
+}
+
+.phone-number-input {
+    display: inline-flex;
+    align-items: center;
+}
+
+.country-code,
+#message,
+#first-name,
+#email {
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid #ccc; /* Optional border for better visibility */
+    border-radius: 5px;
+    vertical-align: middle; /* Align text vertically in the middle */
+    margin-bottom: 10px;
+    width: calc(50% - 15px); /* Adjust based on label width and desired spacing */
+    box-sizing: border-box; /* Ensure width includes padding and border */
+}
+#phone {
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid #ccc; /* Optional border for better visibility */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: calc(50% - 120px); /* Adjust based on label width and desired spacing */
+    box-sizing: border-box; /* Ensure width includes padding and border */
+}
+.country-code {
+    /* Reset default styles and set desired width */
+    width: fit-content; /* Shrink dropdown to content width */
+    max-width: 100px; /* Optional maximum width for dropdown */
+    overflow-y: auto;
+    font-size: 16px;
+    height: 35px;
+}
+.country-code option {
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+/* Responsive styles for tablets (up to 768px) */
+@media screen and (max-width: 768px) {
+    .fixed-header {
+        position: static; /* Change header position to static for smaller screens */
+    }
+
+    .fixed-header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fixed-header .left {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px; /* Add spacing between logo and menu */
+    }
+
+    .fixed-header .logo-img {
+        width: 200px; /*Adjust logo size for smaller screens
+    }
+
+    .fixed-header .right {
+        width: 100%;
+        margin-bottom: 10px; /* Add spacing between logo and menu */
+    }
+
+    .fixed-header nav ul {
+        padding: 0;
+        width: 100%;
+        list-style: none; /* Remove default list styling */
+    }
+
+    .fixed-header nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .fixed-header nav ul li a {
+        padding: 8px 0;
+        display: block;
+    }
+}
+
+
+
+
+
+/* Responsive styles for mobile phones (up to 480px) */
+@media screen and (max-width: 480px) {
+    .logo-img {
+        width: 200px; /* Adjust logo size for smaller screens */
+    }
+    .leftSection {
+        font-size: 1.5rem;
+    }
+
+    .rightSection img {
+        width: 80%;
+    }
+
+    .toolsUsage {
+        padding: 20px 10px;
+    }
+
+    .toolsUsage .toolsIcon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .toolsUsage .toolsIcon img {
+        width: 30px;
+    }
+}
