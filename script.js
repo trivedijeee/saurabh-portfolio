@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Typed.js code (if you're using it)
     var typed = new Typed('#element', {
-      strings: ['Software Quality Test', '&amp; Automate Test Cases.'],
+      strings: ['Web Development', '&amp; Quality Engineering.'],
       typeSpeed: 50,
       loop: true,
     });
