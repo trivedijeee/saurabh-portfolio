@@ -155,14 +155,15 @@ main hr {
     width: 150px;
     font-size: 9px;
 }
-
+/*
 .logo-img {
     width: 250px;
     height: auto;
     margin-top: 10px;
     margin-left: -20%;
-    /* mix-blend-mode: darken; */
+    mix-blend-mode: darken;
 }
+*/
 footer{
     background-color: rgb(12, 12, 33);
 }
@@ -311,6 +312,9 @@ label {
 
 /* Responsive styles for tablets (up to 768px) */
 @media screen and (max-width: 768px) {
+    .rightSection{
+        display: none;
+    }
     .fixed-header {
         position: static; /* Change header position to static for smaller screens */
     }
@@ -383,3 +387,4 @@ label {
         width: 30px;
     }
 }
+/* adding media querry */
