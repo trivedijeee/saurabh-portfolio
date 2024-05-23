@@ -49,11 +49,68 @@ nav ul li a:hover {
     font-size: 1.06rem;
     border-radius: 65px;
     transition: color 1s ease;
-    transform: scale(1.5);
+    transform: scale(1.5); /*need to add some*/
 }
 
 .left {
     font-size: 1.5rem;
+}
+/* cross animation for toggle*/
+.menu-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer; /* Add cursor pointer for better UX */
+    transition: transform 0.3s ease; /* Add transition for icon rotation */
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: background-color 0.3s ease; /* Add transition for background color change */
+}
+
+.menu-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+
+
+.menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0; /* Hide the middle line when checked */
+}
+
+.menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-toggle:checked ~ .fixed-header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: slideDown 0.5s ease; /* Add animation for sliding down */
+}
+
+
+
+.fixed-header nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(13, 13, 50);
+    padding: 10px 0;
 }
 
 .firstSection {
@@ -315,46 +372,7 @@ label {
     .rightSection{
         display: none;
     }
-    .fixed-header {
-        position: static; /* Change header position to static for smaller screens */
-    }
-
-    .fixed-header nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .fixed-header .left {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px; /* Add spacing between logo and menu */
-    }
-
-    .fixed-header .logo-img {
-        width: 200px; /*Adjust logo size for smaller screens
-    }
-
-    .fixed-header .right {
-        width: 100%;
-        margin-bottom: 10px; /* Add spacing between logo and menu */
-    }
-
-    .fixed-header nav ul {
-        padding: 0;
-        width: 100%;
-        list-style: none; /* Remove default list styling */
-    }
-
-    .fixed-header nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .fixed-header nav ul li a {
-        padding: 8px 0;
-        display: block;
-    }
+    
 }
 
 
