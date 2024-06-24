@@ -16,7 +16,6 @@ body {
     color: white;
     font-family: Anek Devanagari;
 }
-
  .fixed-header nav {
     display: flex;
     justify-content: space-around;

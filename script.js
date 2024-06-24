@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
               }
               return 0;
           });
-
           // Populate the dropdown with sorted data
           data.forEach(country => {
               const option = document.createElement('option');
