@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+/* for header */
 .fixed-header {
     position: fixed; /* Fixed position for larger screens */
     top: 0;
@@ -56,8 +57,7 @@ nav ul li a:hover {
     font-size: 1.5rem;
 }
 
-
-
+/* for first content photo git and resume */
 .firstSection {
     display: flex;
     justify-content: space-around;
@@ -98,81 +98,10 @@ nav ul li a:hover {
     color: rgb(154, 89, 215);
 }
 
-.secondSection {
-    max-width: 80vw;
-    margin: auto;
-    height: 80vh;
-} 
 
 
 
-
-
-main hr {
-    border: 0px;
-    background-color: #9c97f1;
-    height: 1.2px;
-    margin: 40px 80px;
-}
-
-.secondSection h1 {
-    font-size: 1.9rem;
-}
-.forIcons h1{
-    font-size: 1.9rem;
-    margin: auto;
-    max-width: 80vw;
-}
-
-.secondSection .box {
-    background: white;
-    width: 43vw;
-    height: 2px;
-    margin: 100px 100px;
-    display: flex;
-}
-
-.secondSection .vertical {
-    background: white;
-    width: 1px;
-    height: 93px;
-    margin: 0 190px;
-}
-
-
-
-
-.imageTop {
-    width: 50px;
-    position: relative;
-    top: -60px;
-    left: -9px;
-    ;
-}
-
-.verticalText {
-    position: relative;
-    top: 50px;
-    width: 150px;
-    font-size: 14px;
-}
-
-.verticalDescription {
-    position: relative;
-    top: 60px;
-    color: grey;
-    width: 150px;
-    font-size: 9px;
-}
-/*
-.logo-img {
-    width: 250px;
-    height: auto;
-    margin-top: 10px;
-    margin-left: -20%;
-    mix-blend-mode: darken;
-}
-*/
+/*css for footer*/
 footer{
     background-color: rgb(12, 12, 33);
 }
@@ -210,8 +139,6 @@ footer .footer-rights{
     justify-content: center;
     height: 45px;
     margin: 0 620px;
-    /* background-color: white; */
-    /* border-radius: 25px; */
   }
 
 .social-icon {
@@ -225,49 +152,10 @@ footer .footer-rights{
 .social-icon img {
     width: 30px; /* Adjust the size of the icons */
 }
-.toolsUsage {
-    background-color: rgb(0, 0, 33);
-    width: 83%;
-    display: flex;
-    justify-content: space-between;
-    margin: 40px auto; /* Center the section horizontally */
-    padding: 50px 80px; /* Add padding to the top and bottom */
-    gap: 10px; /* Optional spacing between icons */
-}
 
-.toolsUsage .toolsIcon {
-    background-color: rgb(0, 0, 33);
-    width: 50px; /* Adjust the width of each icon container */
-    height: 50px; /* Adjust the height of each icon container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    transition: transform 0.3s;
-}
 
-.toolsUsage .toolsIcon img {
-    width: 60px; /* Adjust the size of the icons */
-}
-.toolsUsage .toolsIcon:hover{
-    transform: scale(1.4);
-}
-.toolsUsage .tooltip{
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0,0,0,0.8);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 15px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
 
-.toolsUsage .toolsIcon:hover .tooltip{
-    opacity: 1;
-}
+/* For contact form */
 .form {
     align-items: center;
     font-size: 25px;
@@ -334,7 +222,6 @@ label {
         cursor: pointer; /* Add cursor pointer for better UX */
         transition: transform 0.3s ease; /* Add transition for icon rotation */
     }
-
     .menu-icon span {
         display: block;
         width: 25px;
@@ -343,13 +230,9 @@ label {
         margin: 5px auto;
         transition: background-color 0.3s ease; /* Add transition for background color change */
     }
-
     .menu-toggle {
         display: none; /* Hide the checkbox */
     }
-
-
-
     .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
         transform: rotate(45deg) translate(6px, 6px);
     }
@@ -377,33 +260,9 @@ label {
         width: 100%;
         background-color: rgb(13, 13, 50);
         padding: 10px 0;
-    } /*animation done*/
-
-    /* second section */
-    .secondSection {
-        margin: 40px 10px;
-    }
-
-    .secondSection .box {
-        justify-content: center;
-    }
-
-    .secondSection .vertical {
-        flex: 0 0 calc(50% - 20px);
-        margin: 20px;
-    }
-
-    .secondSection .vertical img {
-        max-width: 100%;
-        height: auto;
-    }
-    /* second section done*/
+    }    
     
 }
-
-
-
-
 
 /* Responsive styles for mobile phones (up to 480px) */
 @media screen and (max-width: 480px) {
@@ -417,18 +276,59 @@ label {
     .rightSection img {
         width: 80%;
     }
+}
 
-    .toolsUsage {
-        padding: 20px 10px;
-    }
+/* work experience css here  */
 
-    .toolsUsage .toolsIcon {
-        width: 50px;
-        height: 50px;
-    }
 
-    .toolsUsage .toolsIcon img {
-        width: 30px;
+h1 {
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 0;
+}
+
+#experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding-left: 30px;
+}
+
+.job {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+}
+
+.job h2 {
+    color: #fff;
+}
+
+.job .company {
+    color: #fff;
+    font-style: italic;
+}
+
+.job .date {
+    color: #fff;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #experience {
+        grid-template-columns: 1fr;
+        padding-left: 30px;
     }
 }
-/* adding media querry */
+/* work experience css ended here  */
