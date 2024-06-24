@@ -332,3 +332,99 @@ ul {
     }
 }
 /* work experience css ended here  */
+
+/* skills section css */
+.forIcons {
+    text-align: center; /* Center align headings and icons */
+}
+
+.forIcons h1 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.toolsUsage {
+    background-color: rgb(0, 0, 33);
+    width: 90%; /* Adjusted width for responsiveness */
+    margin: 20px auto; /* Center the section horizontally */
+    padding: 15px; /* Padding for all devices */
+    display: flex;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    justify-content: space-around; /* Adjust spacing for icons */
+}
+
+.toolsPart1 {
+    display: flex;
+    justify-content: space-around;
+    flex: 1; /* Equal width columns within .toolsUsage */
+    margin-bottom: 10px; /* Spacing between rows */
+}
+
+.toolsIcon {
+    background-color: rgb(0, 0, 33);
+    width: 80px; /* Adjust the width of each icon container */
+    height: 80px; /* Adjust the height of each icon container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s;
+    margin: 5px; /* Space between icons */
+}
+
+.toolsIcon img {
+    max-width: 100%; /* Ensure icon fits within its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.toolsIcon:hover .tooltip {
+    opacity: 1;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1024px) {
+    .toolsIcon {
+        width: 60px; /* Adjust icon container size for tablets */
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .toolsUsage {
+        width: 95%; /* Adjust width for tablets */
+    }
+    .toolsIcon {
+        width: 50px; /* Adjust icon container size for tablets */
+        height: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .toolsUsage {
+        flex-direction: column; /* Stack entire .toolsUsage section vertically */
+        align-items: center; /* Center align items vertically */
+    }
+    .toolsPart1 {
+        flex-direction: row; /* Display .toolsPart1 horizontally for mobile */
+        justify-content: space-around; /* Adjust spacing for icons */
+        margin-bottom: 20px; /* Space between .toolsPart1 rows */
+        margin-top: 20px; /* Space between .toolsPart1 rows */
+    }
+    .toolsPart1:first-child {
+        margin-top: 0; /* Remove top margin from the first .toolsPart1 row */
+    }
+}
+/* skills section css ended */
