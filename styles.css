@@ -102,7 +102,11 @@ nav ul li a:hover {
     max-width: 80vw;
     margin: auto;
     height: 80vh;
-}
+} 
+
+
+
+
 
 main hr {
     border: 0px;
@@ -122,9 +126,9 @@ main hr {
 
 .secondSection .box {
     background: white;
-    width: 80vw;
+    width: 43vw;
     height: 2px;
-    margin: 56px 0;
+    margin: 100px 100px;
     display: flex;
 }
 
@@ -134,6 +138,9 @@ main hr {
     height: 93px;
     margin: 0 190px;
 }
+
+
+
 
 .imageTop {
     width: 50px;
@@ -371,6 +378,26 @@ label {
         background-color: rgb(13, 13, 50);
         padding: 10px 0;
     } /*animation done*/
+
+    /* second section */
+    .secondSection {
+        margin: 40px 10px;
+    }
+
+    .secondSection .box {
+        justify-content: center;
+    }
+
+    .secondSection .vertical {
+        flex: 0 0 calc(50% - 20px);
+        margin: 20px;
+    }
+
+    .secondSection .vertical img {
+        max-width: 100%;
+        height: auto;
+    }
+    /* second section done*/
     
 }
 
