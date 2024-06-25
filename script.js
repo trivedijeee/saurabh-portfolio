@@ -1,36 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Country code fetching and dropdown population
-  const countryCodeDropdown = document.getElementById('country-code');
-  fetch('https://restcountries.com/v3.1/all')
-      .then(response => response.json())
-      .then(data => {
-          // Sort the data array by country name
-          data.sort((a, b) => {
-              const countryA = a.name.common.toUpperCase();
-              const countryB = b.name.common.toUpperCase();
-              if (countryA < countryB) {
-                  return -1;
-              }
-              if (countryA > countryB) {
-                  return 1;
-              }
-              return 0;
-          });
-          // Populate the dropdown with sorted data
-          data.forEach(country => {
-              const option = document.createElement('option');
-              const countryCode = country.cca2; // Get the country code from 'cca2' property
-              const countryName = country.name.common;
-              option.value = `+${countryCode}`;
-              option.textContent = `${countryName} (+${countryCode})`;
-              countryCodeDropdown.appendChild(option);
-          });
 
-          // Set default country code to India
-          const indiaOption = document.querySelector('option[value="+IN"]');
-          indiaOption.selected = true;
-      })
-      .catch(error => console.error(error));
 
   // Typed.js initialization
   var typed = new Typed('#element', {
@@ -93,3 +63,102 @@ document.getElementById('services-link').addEventListener('click', function (eve
     document.getElementById('skillsSection').scrollIntoView({ behavior: 'smooth' });
   });
   // ended js for scroll down when someone click on skill or services
+
+
+//   contact pop up page js 
+document.addEventListener('DOMContentLoaded', function () {
+    const countryCodeDropdown = document.getElementById('country-code');
+
+    // Fetching country codes and populating dropdown
+    fetch('https://restcountries.com/v3.1/all')
+      .then(response => response.json())
+      .then(data => {
+        data.sort((a, b) => {
+          const countryA = a.name.common.toUpperCase();
+          const countryB = b.name.common.toUpperCase();
+          if (countryA < countryB) {
+            return -1;
+          }
+          if (countryA > countryB) {
+            return 1;
+          }
+          return 0;
+        });
+
+        data.forEach(country => {
+          const option = document.createElement('option');
+          const countryCode = country.cca2;
+          const countryName = country.name.common;
+          option.value = `+${countryCode}`;
+          option.textContent = `${countryName} (+${countryCode})`;
+          countryCodeDropdown.appendChild(option);
+        });
+
+        // Set default country code to India
+        const indiaOption = document.querySelector('option[value="+IN"]');
+        indiaOption.selected = true;
+      })
+      .catch(error => console.error(error));
+  });
+
+  // Open popup when clicking on Contact Us button
+  const openPopupBtn = document.getElementById('openPopupBtn');
+  const contactPopup = document.getElementById('contactPopup');
+  const thankYouPopup = document.getElementById('thankYouPopup');
+  const closePopup = document.getElementById('closePopup');
+
+  openPopupBtn.addEventListener('click', function() {
+    contactPopup.style.display = 'block';
+  });
+
+  // Close popup when clicking on close button
+  closePopup.addEventListener('click', function() {
+    contactPopup.style.display = 'none';
+  });
+
+  // Blink close button when clicking outside the contact popup
+  document.addEventListener('click', function(event) {
+    if (event.target.closest('.popup-content') === null && contactPopup.style.display === 'block') {
+      closePopup.classList.add('blink');
+      setTimeout(function() {
+        closePopup.classList.remove('blink');
+      }, 1000); // Adjust the timeout as needed
+    }
+  });
+
+  // Automatically close thank you popup when clicking outside it
+  document.addEventListener('click', function(event) {
+    if (event.target.closest('.popup-content') === null && thankYouPopup.style.display === 'block') {
+      thankYouPopup.style.display = 'none';
+    }
+  });
+
+  // Submit form function
+  function submitForm(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const mobile = document.getElementById('mobile').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Validate mobile number (already pattern attribute in HTML)
+    // Email validation using regex (basic validation)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    // Assuming validation passes, for simplicity, show thank you popup
+    contactPopup.style.display = 'none';
+    thankYouPopup.style.display = 'block';
+
+    // Automatically hide thank you popup after 5 seconds
+    setTimeout(function() {
+      thankYouPopup.style.display = 'none';
+    }, 5000);
+
+    // Optionally, you can reset the form fields here
+    document.getElementById('contactForm').reset();
+  }
+//   pop up js ended here 

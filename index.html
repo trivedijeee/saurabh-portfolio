@@ -23,7 +23,7 @@
                     <li><a id="services-link" href="#">Service</a></li>
                     <li><a href="#skillsSection">Skills</a></li>
                     <li><a href="">Projects</a></li>
-                    <li><a href="contactMe.html">Contact Me</a></li>
+                    <li><a id="openPopupBtn">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -110,7 +110,43 @@
     </main>
 
     <!-- contact page pop code -->
-     
+
+    
+    <!-- <div class="container">
+        <button id="openPopupBtn">Contact Us</button>
+      </div> -->
+      
+      <!-- Contact Popup -->
+      <div id="contactPopup" class="popup">
+        <div class="popup-content">
+          <span class="close" id="closePopup">&times;</span>
+          <h2>Contact Us</h2>
+          <form id="contactForm" onsubmit="submitForm(event)">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+            
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" placeholder="Mobile Number" pattern="[0-9]{10}" required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Email Address" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Message"></textarea>
+            
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Thank You Popup -->
+      <div id="thankYouPopup" class="popup">
+        <div class="popup-content">
+          <h2>Thank You!</h2>
+          <p>Your message has been submitted successfully.</p>
+        </div>
+      </div>
+<!-- pop up for contact us ended here -->
 
 
 
