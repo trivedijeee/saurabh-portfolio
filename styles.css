@@ -359,10 +359,16 @@ ul {
     opacity: 0;
     transition: opacity 0.3s;
 }
-
 .toolsIcon:hover .tooltip {
     opacity: 1;
 }
+
+
+ .toolsIcon:hover {
+    transform: scale(1.5);
+ }
+
+
 
 /* Media Queries for Responsive Design */
 
