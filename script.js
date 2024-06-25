@@ -41,10 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Download resume button click event listener
   document.getElementById('downloadResumeBtn').onclick = function () {
-      var resumeUrl = 'saurabh.docx'; // Replace with your actual resume file URL
+      var resumeUrl = 'saurabhRe.pdf'; // Replace with your actual resume file URL
       var link = document.createElement('a');
       link.href = resumeUrl;
-      link.download = 'saurabh.docx';
+      link.download = 'saurabhRe.pdf';
       link.click();
   };
 
