@@ -511,7 +511,6 @@ footer .footer-rights {
 
   label {
     display: block;
-    margin-bottom: 5px;
     font-weight: bold;
   }
 
@@ -551,6 +550,7 @@ footer .footer-rights {
           width: 90%; /* Adjust width for smaller screens */
           margin: 10% auto; /* Center align horizontally and adjust vertical spacing */
           padding: 15px; /* Adjust padding for smaller screens */
+          margin-top: 80px;
       }
 
       button[type="submit"] {
