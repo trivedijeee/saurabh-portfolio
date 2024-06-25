@@ -48,13 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
       link.click();
   };
 
-  // Services link click event listener
-  document.getElementById('services-link').addEventListener('click', function (event) {
-      event.preventDefault(); // Prevent default link behavior
-
-      // Example: Scroll to the "Skills" section
-      document.getElementById('skillsSection').scrollIntoView({ behavior: 'smooth' });
-  });
 
   // when scroll, hide the open item in the menu
   window.addEventListener('scroll', function() {
@@ -87,3 +80,16 @@ document.addEventListener('DOMContentLoaded', function () {
       event.stopPropagation(); // Prevent the click event from bubbling up to the document
   });
 });
+// writting js for scroll down when someone click on skill or services
+document.getElementById('services-link').addEventListener('click', function (event) {
+    event.preventDefault(); 
+    document.getElementById('work-experience-section').scrollIntoView({ behavior: 'smooth' });
+  })
+
+  // Skills link click event listener (if you're using it)
+  document.querySelector('nav ul li a[href="#skillsSection"]').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    // Scroll to the "Skills" section
+    document.getElementById('skillsSection').scrollIntoView({ behavior: 'smooth' });
+  });
+  // ended js for scroll down when someone click on skill or services
