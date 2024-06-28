@@ -174,3 +174,9 @@ document.addEventListener('DOMContentLoaded', function () {
       event.stopPropagation();
   });
 });
+
+var project = new Typed('#element01', {
+    strings: ['coming shortly!', 'Thanks for tolerance.🙏'],
+    typeSpeed: 50,
+    loop: true,
+    });
