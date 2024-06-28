@@ -366,6 +366,31 @@ ul {
 footer {
     background-color: rgb(12, 12, 33);
 }
+footer ul li a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+footer ul li a:hover {
+    color: rgb(131, 151, 239);
+    font-size: 1.06rem;
+    border-radius: 65px;
+    transition: color 1s ease;
+    transform: scale(1.5); /*need to add some*/
+}
+footer h3 a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+footer h3 a:hover {
+    color: rgb(131, 151, 239);
+    font-size: 1.06rem;
+    border-radius: 65px;
+    transition: color 1s ease;
+    transform: scale(1.5); /*need to add some*/
+}
+
 
 .footer {
     display: flex;
@@ -384,7 +409,7 @@ footer {
 footer .footer-rights {
     text-align: center;
     color: grey;
-    padding: 12px 0;
+    padding: 12px 0; 
 }
 
 .leftSection .buttons {

@@ -15,17 +15,17 @@ document.addEventListener('DOMContentLoaded', function () {
       link.click();
   };
 
-  // Scroll to work experience section when clicking on services link
-  document.getElementById('services-link').addEventListener('click', function (event) {
-      event.preventDefault();
-      document.getElementById('work-experience-section').scrollIntoView({ behavior: 'smooth' });
-  });
+//   // Scroll to work experience section when clicking on services link
+//   document.getElementById('services-link').addEventListener('click', function (event) {
+//       event.preventDefault();
+//       document.getElementById('work-experience-section').scrollIntoView({ behavior: 'smooth' });
+//   });
 
-  // Skills link click event listener (if you're using it)
-  document.querySelector('nav ul li a[href="#skillsSection"]').addEventListener('click', function (event) {
-      event.preventDefault();
-      document.getElementById('skillsSection').scrollIntoView({ behavior: 'smooth' });
-  });
+//   // Skills link click event listener (if you're using it)
+//   document.querySelector('nav ul li a[href="#skillsSection"]').addEventListener('click', function (event) {
+//       event.preventDefault();
+//       document.getElementById('skillsSection').scrollIntoView({ behavior: 'smooth' });
+//   });
 
   // Country code fetching and dropdown population
   const countryCodeDropdown = document.getElementById('country-code');
