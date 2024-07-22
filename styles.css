@@ -618,6 +618,11 @@ footer .footer-rights {
     max-height: 475px;
     border-radius: 30px;
     flex: 1;
+    transition: transform 0.3s ease;
+}
+.rightImg img:hover {
+    transform: scale(1.15); 
+    filter: drop-shadow(-1rem -1rem 10px rgb(255, 255, 255));
 }
 .aboutTwo {
     display: flex;
@@ -649,10 +654,17 @@ footer .footer-rights {
 }
 .rightImg h3 {
     font-size: 20px;
+    color: white;
     width: fit-content;
     margin-bottom: 10px;
     display: inline-block;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
   }
+.rightImg h3:hover{
+    color: #4CAF50;
+    transform: scale(1.15);
+}
 @media screen and (max-width: 1200px) and (min-width: 868px){
   .projectPart{
     margin-left: 0px;
