@@ -665,6 +665,11 @@ footer .footer-rights {
     color: #4CAF50;
     transform: scale(1.15);
 }
+hr{
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 @media screen and (max-width: 1200px) and (min-width: 768px){
   .projectPart{
     margin-left: 0px;
