@@ -1,15 +1,15 @@
 body {
-    text-align: center;
-    background-color: #283149;
-  }
+  text-align: center;
+  background-color: #283149;
+}
   /* adding header */
-  .fixed-header {
-    position: fixed; /* Fixed position for larger screens */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(7, 7, 44, 0.9);
+.fixed-header {
+  position: fixed; /* Fixed position for larger screens */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(7, 7, 44, 0.9);
 }
 body {
     background-color: rgb(0, 0, 33);
@@ -23,19 +23,16 @@ body {
     height: 70px;
     background-color: rgb(13, 13, 50);
 }
-
 nav ul {
     display: flex;
     justify-content: center;
 }
-
 nav ul li {
     list-style: none;
     margin: 0 23px;
     width: 100px;
     text-align: center;
 }
-
 nav ul li a {
     text-decoration: none;
     color: white;
@@ -43,7 +40,6 @@ nav ul li a {
     padding: 10px 0;
     width: 100%;
 }
-
 nav ul li a:hover {
     color: rgb(131, 151, 239);
     font-size: 1.06rem;
@@ -51,65 +47,97 @@ nav ul li a:hover {
     transition: color 1s ease;
     transform: scale(1.5); /*need to add some*/
 }
-  /* ended header css here */
-  h1 {
-    margin-top:100px;
-    font-size: 5rem;
-    color: #DBEDF3;
-    font-family: "Arvo", cursive;
-    text-shadow: 3px 0 #DA0463;
+/* ended header css here */
+h1 {
+  margin-top:100px;
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+}
+.w {
+  background-image: url(./images/tom1.png);
+
+}
+.a {
+  background-image: url(./images/tom2.png);
+}
+.s {
+  background-image: url(./images/tom3.png);
+}
+.d {
+  background-image: url(./images/tom4.png);
+}
+.j {
+  background-image: url(./images/snare.png);
+}
+.k {
+  background-image: url(./images/crash.png);
+}
+.l {
+  background-image: url(./images/kick.png);
+}
+.set {
+  margin: 10% auto;
+}
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+.red {
+  color: red;
+}
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+}
+footer h3 a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+footer h3 a:hover {
+  color: rgb(131, 151, 239);
+  font-size: 1.06rem;
+  border-radius: 65px;
+  transition: color 1s ease;
+  transform: scale(1.5); 
+}
+.footer {
+  display: flex;
+  padding: 23px 122px;
+  justify-content: space-evenly;
+}
+footer .footer-rights {
+  text-align: center;
+  color: grey;
+  padding: 12px 0; 
+}
+@media (max-width: 768px) {
+  .footer {
+      padding: 15px;
   }
-  .w {
-    background-image: url(./images/tom1.png);
-  
+}
+@media (max-width: 480px) {
+  .footer {
+      align-items: center;
   }
-  .a {
-    background-image: url(./images/tom2.png);
-  }
-  .s {
-    background-image: url(./images/tom3.png);
-  }
-  .d {
-    background-image: url(./images/tom4.png);
-  }
-  .j {
-    background-image: url(./images/snare.png);
-  }
-  .k {
-    background-image: url(./images/crash.png);
-  }
-  .l {
-    background-image: url(./images/kick.png);
-  }
-  .set {
-    margin: 10% auto;
-  }
-  .game-over {
-    background-color: red;
-    opacity: 0.8;
-  }
-  .pressed {
-    box-shadow: 0 3px 4px 0 #DBEDF3;
-    opacity: 0.5;
-  }
-  .red {
-    color: red;
-  }
-  .drum {
-    outline: none;
-    border: 10px solid #404B69;
-    font-size: 5rem;
-    font-family: 'Arvo', cursive;
-    line-height: 2;
-    font-weight: 900;
-    color: #DA0463;
-    text-shadow: 3px 0 #DBEDF3;
-    border-radius: 15px;
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    text-align: center;
-    margin: 10px;
-    background-color: white;
-  }
-  
+
+}
