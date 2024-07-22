@@ -665,7 +665,7 @@ footer .footer-rights {
     color: #4CAF50;
     transform: scale(1.15);
 }
-@media screen and (max-width: 1200px) and (min-width: 868px){
+@media screen and (max-width: 1200px) and (min-width: 768px){
   .projectPart{
     margin-left: 0px;
     margin-right: 0px;
@@ -681,25 +681,33 @@ footer .footer-rights {
   }
   .aboutTwo .box3 {
     padding: 15px;
-    font-size: 19px;
   }
+  .aboutTwo .box2 .box3 {
+    font-size: 10px;
+    }
 }
-@media (max-width: 868px) {
+@media (max-width: 768px) {
       .projectPart {
         flex-direction: column;
         align-items: center;
         margin-left: 0px;
         margin-right: 0px;
         margin-top: 50px;
+        padding: 0;
       }
-      .leftText, .rightImg {
+      .leftText{
         flex: 100%;
         text-align: center;
         padding: 10px;
       }
+      .rightImg img {
+        /* display: none; */
+        max-width: 90%;
+    } 
       .aboutTwo {
         flex-direction: column;
         margin: 0 0;
+        padding: 0;
       }
       .aboutTwo .box1{
         margin-bottom: 20px;;
@@ -714,5 +722,9 @@ footer .footer-rights {
         padding: 15px;
         font-size: 12px;
       }
+      .aboutTwo .box2 .box3 {
+        font-size: 10px;
+        }
+        
     }
     /* project one css ended */
