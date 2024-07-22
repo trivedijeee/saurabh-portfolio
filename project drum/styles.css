@@ -4,7 +4,7 @@ body {
 }
   /* adding header */
 .fixed-header {
-  position: fixed; /* Fixed position for larger screens */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
@@ -130,14 +130,48 @@ footer .footer-rights {
   color: grey;
   padding: 12px 0; 
 }
+.container {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  line-height: 2;
+}
+.container h1 {
+  text-align: center;
+  /* color: #333; */
+}
+.container p {
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: left;
+}
+.container ul{
+  text-align: left;
+  font-size: 18px;
+}
+.container h2{
+  text-align: left;
+  font-size: 2.5rem;
+}
 @media (max-width: 768px) {
   .footer {
       padding: 15px;
   }
+  .container h1{
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
 }
 @media (max-width: 480px) {
   .footer {
       align-items: center;
+  }
+  .container h1{
+    font-size: 2rem;
+    margin-bottom: 0;
   }
 
 }
