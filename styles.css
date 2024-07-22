@@ -535,7 +535,6 @@ footer .footer-rights {
     gap: 10px;
     width: 100%; /* Ensure form takes full width inside popup */
   }
-
   label {
     display: block;
     font-weight: bold;
@@ -587,3 +586,121 @@ footer .footer-rights {
     
   }
   /* pop css ended here */
+
+
+
+  /* project one css */
+.projectPart {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 129px; 
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.leftText {
+    font-size: 55px;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+}
+.rightImg {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 500px;
+    max-height: 500px;
+}
+.rightImg img {
+    max-width: 500px;
+    max-height: 475px;
+    border-radius: 30px;
+    flex: 1;
+}
+.aboutTwo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+  .aboutTwo .box1 {
+    padding: 20px;
+    max-width: 450px;
+    max-height: 450px;
+}
+.aboutTwo .box2 {
+    background-color: #fff;
+    transform: rotate(-7deg);
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+.aboutTwo .box2 .box3 {
+    background-color: #fff;
+    transform: rotate(7deg);
+    padding: 20px;
+    font-size: 19px;
+}
+.aboutTwo .box3{
+    color: #140303;
+}
+.rightImg h3 {
+    font-size: 20px;
+    width: fit-content;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+@media screen and (max-width: 1200px) and (min-width: 868px){
+  .projectPart{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 120px; 
+    margin-bottom: 20px;
+  }
+  .aboutTwo {
+    margin: 10px 10px;
+  }
+  .aboutTwo .box2 {
+    margin-top: 20px;
+    left: 0;
+  }
+  .aboutTwo .box3 {
+    padding: 15px;
+    font-size: 19px;
+  }
+}
+@media (max-width: 868px) {
+      .projectPart {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 50px;
+      }
+      .leftText, .rightImg {
+        flex: 100%;
+        text-align: center;
+        padding: 10px;
+      }
+      .aboutTwo {
+        flex-direction: column;
+        margin: 0 0;
+      }
+      .aboutTwo .box1{
+        margin-bottom: 20px;;
+      }
+      .aboutTwo .box2 {
+        font-size: 19px;
+        max-width: none;
+        margin-top: 20px;
+        left: 0;
+      }
+      .aboutTwo .box3 {
+        padding: 15px;
+        font-size: 12px;
+      }
+    }
+    /* project one css ended */
