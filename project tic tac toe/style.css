@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #6958d5;
+}
+
+
+/* adding header */
+.fixed-header {
+position: fixed; 
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+background-color: rgba(7, 7, 44, 0.9);
+}
+.fixed-header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(13, 13, 50);
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+    width: 100px;
+    text-align: center;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 10px 0;
+    width: 100%;
+}
+nav ul li a:hover {
+    color: rgb(131, 151, 239);
+    font-size: 1.06rem;
+    border-radius: 65px;
+    transition: color 1s ease;
+    transform: scale(1.5); /*need to add some*/
+}
+/* ended header css here */
+
+.container01 {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 20px;
+    margin-top: 140px;
+    padding-top: 20px;
+
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #6958d5;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border radius is applied */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #6958d5;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    color: #6958d5;
+}
+.cell:hover {
+    transform: scale(1.1);
+}
+.status {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #6958d5;
+}
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: #6958d5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+button:hover {
+    color: rgb(131, 151, 239);
+    font-size: 1.06rem;
+    border-radius: 65px;
+    transition: color 1s ease;
+    transform: scale(1.5); 
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer h3 a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+  }
+  footer h3 a:hover {
+    color: rgb(131, 151, 239);
+    font-size: 1.06rem;
+    border-radius: 65px;
+    transition: color 1s ease;
+    transform: scale(1.5); 
+  }
+  .footer {
+    text-align: center;
+    padding: 23px 122px;
+
+  }
+  footer .footer-rights {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 12px 0; 
+  }
+
+  .container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    line-height: 2;
+  }
+  .container h1 {
+    text-align: center;
+    /* color: #333; */
+  }
+  .container p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: left;
+  }
+  .container ul{
+    text-align: left;
+    font-size: 18px;
+  }
+  .container h2{
+    text-align: left;
+    font-size: 2.5rem;
+  }
+  @media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+    }
+    .container h1{
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+  
+  }
+  @media (max-width: 480px) {
+    .footer {
+        align-items: center;
+    }
+    .container h1{
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+  
+  }
+  

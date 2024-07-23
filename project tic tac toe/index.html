@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Project - tic tac toe</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+  <link rel="icon" href="../img/saurabh.jpeg" type="image/x-icon">
+</head>
+<body>
+  <header class="fixed-header">
+    <nav>
+        <div class="right">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../myProject.html">Projects page</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- The player name input modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Enter Player Names</h2>
+      <input type="text" id="player1Name" placeholder="Player One Name">
+      <input type="text" id="player2Name" placeholder="Player Two Name">
+      <button onclick="startGame()">Start Game</button>
+    </div>
+  </div>
+  
+  <!-- Existing game container -->
+  <div class="first"><h1>Tic Tac Toe</h1></div>
+  <div class="container01">
+      <!-- <h2>Tic Tac Toe</h2> -->
+      <div id="board" class="board">
+          <div class="cell" onclick="makeMove(0)"></div>
+          <div class="cell" onclick="makeMove(1)"></div>
+          <div class="cell" onclick="makeMove(2)"></div>
+          <div class="cell" onclick="makeMove(3)"></div>
+          <div class="cell" onclick="makeMove(4)"></div>
+          <div class="cell" onclick="makeMove(5)"></div>
+          <div class="cell" onclick="makeMove(6)"></div>
+          <div class="cell" onclick="makeMove(7)"></div>
+          <div class="cell" onclick="makeMove(8)"></div>
+      </div>
+      <div id="status" class="status">Player One's turn</div>
+      <button onclick="resetGame()">Reset Game</button>
+  </div>
+<footer>
+  <div class="footer">
+      <div class="footerFirst">
+          <h3><a href="./about.html">About Project</a></h3>
+      </div>
+    <div class="footer-rights">
+        Copyrights &#169; saurabh Kumar | All rights reserved
+    </div>
+  </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>

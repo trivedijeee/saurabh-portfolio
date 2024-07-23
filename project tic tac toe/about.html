@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>About Drum Kit</title>
+  <link rel="stylesheet" href="../project drum/styles.css">
+  <link rel="icon" href="../img/saurabh.jpeg" type="image/x-icon">
+<style>
+    h3{
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+  <header class="fixed-header">
+    <nav>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="../myProject.html">Projects page</a></li>
+                <li><a href="../index.html">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- about project  -->
+<div class="container">
+    <h1>Project : Tic Tac Toe Game</h1>
+    <h2>Description:</h2>
+    <p>The Tic Tac Toe game implemented here is a classic two-player game where players take turns marking cells in a 3x3 grid with their respective symbols ('X' and 'O'). The game interface includes a modal for players to enter their names before starting, adding a personalized touch to the gameplay experience.</p>
+    <h2>Features:</h2>
+    <h3>Game Mechanics:</h3>
+    <ul>
+      <li>Players alternate turns to click on empty cells to place their symbol ('X' or 'O').</li>
+      <li>The game checks for a win after each move by comparing the current board state against predefined winning combinations (rows, columns, and diagonals).</li>
+      <li>If all cells are filled without a winner, the game declares a draw.</li>
+    </ul>
+    <h3>User Interface:</h3>
+    <ul>
+        <li><strong>For Player Names:</strong> Upon loading the page, a modal prompts players to enter their names before starting the game. This feature enhances user interaction by personalizing the game experience.</li>
+        <li><strong>Responsive Board:</strong> The game board is responsive, adjusting its layout based on the screen size. It maintains a clean and modern aesthetic with a contrasting color scheme for readability.</li>
+    </ul>
+    <h3>Status Messages:</h3>
+    <ul>
+        <li>The status area above the board dynamically updates to reflect whose turn it is or to announce the winner/draw.</li>
+        <li>Modified to display "Player One Name wins!" instead of generic "Player X wins!" for a more personalized experience based on entered player names.</li>
+    </ul>
+    <h3>Reset and Start:</h3>
+    <ul>
+        <li>Players can reset the game at any time, clearing the board and resetting all game variables.</li>
+        <li>Upon entering player names and starting the game, the modal closes, and the game status updates to indicate the starting player's turn.</li>
+    </ul>
+    <h3>Design Considerations:</h3>
+    <ul>
+        <li><strong>Styling:</strong> The game interface utilizes modern CSS techniques such as flexbox and grid layouts for responsiveness and aesthetics.</li>
+        <li><strong>Design:</strong> The modal for entering player names features a centered layout with input fields and a button to start the game, ensuring ease of use and clear instructions.</li>
+    </ul>
+    <h2>Implementation:</h2>
+    <ul>
+      <li><strong>HTML:</strong> Defines the structure of the game interface, including the modal for player names and the game board.</li>
+      <li><strong>CSS:</strong> Provides styling to create a visually appealing and responsive layout, enhancing user experience.</li>
+      <li><strong>JavaScript:</strong> Implements game logic such as handling player moves, checking for wins/draws, updating game status, and managing player input through the modal.</li>
+    </ul>
+    <h2>Future Enhancements:</h2>
+    <ul>
+        <li><strong>AI Player:</strong> Implement an AI opponent for single-player mode.</li>
+        <li><strong>Score Tracking:</strong> Add functionality to track and display scores across multiple games.</li>
+        <li><strong>Animations:</strong> Enhance user experience with animations for moves and game transitions.</li>
+    </ul>
+    <p><b>Conclusion:</b><br>
+        This project showcases a well-designed and functional implementation of the classic Tic Tac Toe game with added features for player personalization through name input. It serves as a foundation for further enhancements and can be expanded with additional features to enrich the gameplay experience.</p>
+</div>
+<footer>
+    <div class="footer">
+        <!-- <div class="footerFirst">
+            <h3><a href="./about.html">About Project</a></h3>
+        </div> -->
+      <div class="footer-rights">
+          Copyrights &#169; saurabh Kumar | All rights reserved
+      </div>
+    </div>
+</footer>
+
+  
+ 
+<script src="script.js"></script>
+</body>
+</html>
