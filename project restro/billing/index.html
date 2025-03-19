@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dine In</h1>
+        <div class="customer-info">
+            <p>Mr. Kumar | +91 0000000000</p>
+            <p>Bihar</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="menu">
+            <h2>Menu Items</h2>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search menu items..." onkeyup="searchMenu()">
+            </div>
+            <div class="grid">
+                <!-- Menu items -->
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Mutton Biryani">
+                    <p>Mutton Biryani</p>
+                    <button onclick="addToCart('Mutton Biryani', 340, 'Half')">Half</button>
+                    <button onclick="addToCart('Mutton Biryani', 360, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Non Veg Meals">
+                    <p>Non Veg Meals</p>
+                    <button onclick="addToCart('Non Veg Meals', 390, 'Half')">Half</button>
+                    <button onclick="addToCart('Non Veg Meals', 410, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Chettinad Chicken">
+                    <p>Chettinad Chicken</p>
+                    <button onclick="addToCart('Chettinad Chicken', 450, 'Half')">Half</button>
+                    <button onclick="addToCart('Chettinad Chicken', 470, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Chicken Fried Rice">
+                    <p>Chicken Fried Rice</p>
+                    <button onclick="addToCart('Chicken Fried Rice', 300, 'Half')">Half</button>
+                    <button onclick="addToCart('Chicken Fried Rice', 320, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Prawn 65">
+                    <p>Prawn 65</p>
+                    <button onclick="addToCart('Prawn 65', 310, 'Half')">Half</button>
+                    <button onclick="addToCart('Prawn 65', 330, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Pepper Chicken">
+                    <p>Pepper Chicken</p>
+                    <button onclick="addToCart('Pepper Chicken', 450, 'Half')">Half</button>
+                    <button onclick="addToCart('Pepper Chicken', 470, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Tandoori Chicken">
+                    <p>Tandoori Chicken</p>
+                    <button onclick="addToCart('Tandoori Chicken', 590, 'Half')">Half</button>
+                    <button onclick="addToCart('Tandoori Chicken', 610, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Grill Chicken">
+                    <p>Grill Chicken</p>
+                    <button onclick="addToCart('Grill Chicken', 490, 'Half')">Half</button>
+                    <button onclick="addToCart('Grill Chicken', 510, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Mushroom 65">
+                    <p>Mushroom 65</p>
+                    <button onclick="addToCart('Mushroom 65', 250, 'Half')">Half</button>
+                    <button onclick="addToCart('Mushroom 65', 270, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Fish Curry">
+                    <p>Fish Curry</p>
+                    <button onclick="addToCart('Fish Curry', 400, 'Half')">Half</button>
+                    <button onclick="addToCart('Fish Curry', 420, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Paneer 65">
+                    <p>Paneer 65</p>
+                    <button onclick="addToCart('Paneer 65', 350, 'Half')">Half</button>
+                    <button onclick="addToCart('Paneer 65', 370, 'Full')">Full</button>
+                </div>
+                <div class="menu-item">
+                    <img src="saurabh.jpeg" alt="Pepper Fish">
+                    <p>Pepper Fish</p>
+                    <button onclick="addToCart('Pepper Fish', 500, 'Half')">Half</button>
+                    <button onclick="addToCart('Pepper Fish', 520, 'Full')">Full</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>Cart</h2>
+            <div class="cart-header">
+                <div class="cart-item-name">Item Name</div>
+                <div class="cart-quantity">Quantity</div>
+                <div class="cart-item-price">Item Price</div>
+                <div class="cart-total">Total</div>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-footer">
+                <p>Grand Total: ₹<span id="total-amount">0</span></p>
+                <button onclick="checkout('option1')">Cash</button>
+                <button onclick="checkout('option2')">UPI</button>
+            </div>
+        </div>
+    </div>
+    <!-- Receipt Popup -->
+    <div id="receipt-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2> saurabh Receipt</h2>
+            <p><strong>Payment Method:</strong> <span id="payment-method"></span></p> <!-- Added payment method -->
+            <p><strong>Date & Time:</strong> <span id="current-date-time"></span></p> <!-- Added date and time -->
+            <div class="cart-header">
+                <div class="cart-item-name">Item Name</div>
+                <div class="cart-quantity">Quantity</div>
+                <div class="cart-item-price">Item Price</div>
+                <div class="cart-total">Total</div>
+            </div>
+            <div id="receipt-details" class="cart-items"></div>
+            <div class="cart-footer">
+                <p>Grand Total: ₹<span id="receipt-total-amount">0</span></p>
+                <button onclick="printReceipt()">Print Receipt</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
